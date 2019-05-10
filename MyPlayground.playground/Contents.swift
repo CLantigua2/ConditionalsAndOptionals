@@ -31,3 +31,16 @@ if (dollars <= 0) {
 } else {
     print("wow kid, you're rich")
 }
+
+var steps: Double = 200
+let stepGoal: Double = 10000
+
+if (steps < stepGoal / 2 && steps > stepGoal / 10) {
+    print("You're half way there")
+} else if (steps <= stepGoal / 10) {
+    print("Way to get a good start today")
+} else if (steps < stepGoal && steps > stepGoal / 2) {
+    print("You're more than half way there")
+} else {
+    print("Yay you did it")
+}
