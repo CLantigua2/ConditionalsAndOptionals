@@ -7,9 +7,8 @@
  
  Create constants `isInTarget`, `isBelowTarget`, and `isAboveTarget` that equal expressions that evaluate to whether or not `currentHR` is between the lower and upper bounds, below the lower bound, and above the upper bound, respectively. Then write an if-else-if statement that will print "You're right on track!" if the user is inside the target zone, "You're doing great, but try to push it a bit!" if the user is below the target zone, and "You're on fire! Slow it down just a bit." if the user is above the target zone.
  */
-let targetLowerBound = 120
-let targetUpperBound = 150
-let currentHR = 147
-
+let targetLowerBound: Int = 120
+let targetUpperBound: Int = 150
+let currentHR: Int = 147
 
 //: [Previous](@previous)  |  page 5 of 9  |  [Next: Heart Rate Zones](@next)
