@@ -13,3 +13,21 @@ print(4 >= 5) // false
 print((42 > 88) && (42 < 88)) // false
 
 print(!true) // false
+
+/*Imagine you're creating a machine that will count your money for you and tell you how wealthy you are based on how much money you have. A variable dollars has been given to you with a value of 0. Write an if statement that prints "Sorry, kid. You're broke!" if dollars has a value of 0. Observe what is printed to the console.*/
+
+var dollars: Float = 0
+
+dollars == 0 ? print("Sorry kid, you're broke") : print("Well, at least you have \(dollars)")
+
+/*dollars has been updated below to have a value of 105. Write an an if-else-if statement that prints "Sorry, kid. You're broke!" if dollars has a value of 0, prints "You've got some spending money!" if dollars is less than 100, and prints "Looks to me like you're rich!" otherwise. Observe what is printed to the console.*/
+
+dollars = 105
+
+if (dollars <= 0) {
+    print("Sorry kid, you're broke")
+} else if (dollars > 0 && dollars < 50) {
+    print("you're doing alright for yourself")
+} else {
+    print("wow kid, you're rich")
+}
