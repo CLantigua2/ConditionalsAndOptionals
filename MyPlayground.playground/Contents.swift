@@ -87,7 +87,7 @@ if (temp >= 82 && isSunny) {
  
  Create constants isInTarget, isBelowTarget, and isAboveTarget that equal expressions that evaluate to whether or not currentHR is between the lower and upper bounds, below the lower bound, and above the upper bound, respectively. Then write an if-else-if statement that will print "You're right on track!" if the user is inside the target zone, "You're doing great, but try to push it a bit!" if the user is below the target zone, and "You're on fire! Slow it down just a bit." if the user is above the target zone.*/
 
-let targetLowerBound = 120
+var targetLowerBound = 120
 let targetUpperBound = 150
 let currentHR = 147
 
@@ -103,3 +103,63 @@ if (currentHR < targetLowerBound) {
     print(isIntarget)
 }
 
+/*If you completed the Target Heart Rate exercise, you showed different statements to the user based on whether or not the user's heart rate was inside of a target zone. Now you decide to just tell them what zone they are in rather than tell them what zone to be in.
+ 
+ Write a switch statement that will print different statements based on what range currentHR falls into. Below is a list of ranges and the associated statements
+ 
+ 0-99: "You are not excercising yet."
+ 100-120: "You are in the Very Light zone. Activity in this zone helps with recovery."
+ 121-140: "You are in the Light zone. Activity in this zone helps improve basice endurance and fat burning."
+ 141-160: "You are in the Moderate zone. Activity in this zone helps improve aerobic fitness."
+ 161-180: "You are in the Hard zone. Activity in this zone increases maximum performance capacity for shorter sessions."
+ 181-200: "You are in the Maximum zone. Activity in this zone helps fit athletes develop speed."
+ 
+ If currentHR is above the listed zones, print some kind of warning asking the user to slow down. */
+
+let curr_HR = 128
+
+switch curr_HR {
+case 0...99:
+    print("You are not excersing yet")
+case 100...120:
+    print("You are in the Very Light zone. Activity in this zone helps with recovery")
+case 121...140:
+    print("You are in the Light zone. Activity in this zone helps improve basice endurance and fat burning.")
+case 141...160:
+    print("You are in the Moderate zone. Activity in this zone helps improve aerobic fitness.")
+case 161...180:
+    print("You are in the Hard zone. Activity in this zone increases maximum performance capacity for shorter sessions.")
+case 181...200:
+    print("You are in the Maximum zone. Activity in this zone helps fit athletes develop speed.")
+default:
+    print("You are above the Maximum zone and may need to slow down")
+}
+
+/* Refactor the code below so that largest is declared and assigned to in one line using the ternary operator. */
+let number1 = 14
+let number2 = 25
+
+var largest: Int
+
+number1 > number2 ? (largest = number1) : (largest = number2)
+print(largest)
+
+/* Throughout the exercises in this playground, you will be printing optional values. The Swift compiler will display a warning: "Expression implicitly coerced from Int? to Any". For the purposes of these exercises, you can ignore this warning.
+ 
+ Imagine you have an app that asks the user to enter his/her age using the keyboard. When your app allows a user the input text, what is captured for you is given as a String. However, you want to store this information as an Int. Is it possible for the user to make a mistake and for the input to not match the type you want to store?
+ 
+ Declare a constant userInputAge of type String and assign it "34e" to simulate a typo while typing age. Then declare a constant userAge of type Int and use the Int initializer and pass in userInputAge (let userAge = Int(userInputAge)). What error do you get?
+ 
+ Go back and change the type of userAge to Int?, and print the value of userAge. Why is userAge's value nil? Provide your answer in a comment or print statement below.
+ 
+ Now go back and fix the typo on the value of userInputAge. Is there anything about the value printed that seems off?
+ 
+ Now use optional binding to unwrap userAge. If userAge has a value, print it to the console.
+ */
+
+let userInputAge: String = "34"
+let userAge: Int? = Int(userInputAge)
+
+if let unwrappedUserInputAge = userAge {
+    print(unwrappedUserInputAge)
+}
